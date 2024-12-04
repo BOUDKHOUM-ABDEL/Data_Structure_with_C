@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 typedef struct {
-
   int num ;
   char nom[50];
   char post[10];
@@ -9,9 +8,7 @@ typedef struct {
 
 int main() {
 
-    Player p1, p2, p3;
-
-
+  Player p1, p2, p3;
 
   printf("put the player number:");
   scanf("%d",&p1.num);
