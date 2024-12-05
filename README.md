@@ -3,6 +3,7 @@ Player Information Input Program: This simple C program collects and displays ba
 Features:
 
  Uses a typedef struct to represent a player's details:
+ 
        Player Number (integer)---
        
        Player Name (string, up to 50 characters)---
