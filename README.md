@@ -4,7 +4,11 @@ Features:
 
  Uses a typedef struct to represent a player's details:
        Player Number (integer)---
+       
        Player Name (string, up to 50 characters)---
+       
        Player Position (string, up to 10 characters)---
+       
 Collects information for three players through console input.
+
 Outputs all collected player data in a formatted way.
