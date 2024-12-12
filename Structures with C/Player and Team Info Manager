@@ -1,6 +1,3 @@
-<-- The program defines a structure to store information about players and their teams in a sports context.
-It uses two structs to represent the team and player details,and it allows the user to input and display this information for two players. --?
-
 #include <stdio.h>
 
 typedef struct {
