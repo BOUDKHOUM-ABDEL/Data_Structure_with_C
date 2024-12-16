@@ -11,7 +11,7 @@ typedef struct node {
 node* newnode(int val) {
     node* nouv = (node*)malloc(sizeof(node));
     if (!nouv) {
-        perror("Allocation �chou�e");
+        perror("Allocation echouee");
         exit(EXIT_FAILURE);
     }
     nouv->data = val;
