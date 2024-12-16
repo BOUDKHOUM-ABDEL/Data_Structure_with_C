@@ -7,6 +7,7 @@ int main() {
     int val, choix;
     node* start = NULL;
 
+    
     do {
         puts("-------------------------MENU----------------------------");
         printf("1. Ajouter un node au debut.\n");
