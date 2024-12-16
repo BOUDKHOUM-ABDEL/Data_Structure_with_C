@@ -9,6 +9,8 @@
        1. The Basics, But Powerful 💥 
 
           Structs: Simple but mighty.
+          
+          Singly Linked Lists: One step at a time, link by link.
     
        2. Algorithm Adventures 🏃‍♂️ 
 
@@ -23,8 +25,6 @@
 **What’s Coming Next? 🎉 (Get Excited) 🔮**
 
          1. The Basics, But Powerful 💥
-   
-          Singly Linked Lists: One step at a time, link by link.
    
           Doubly Linked Lists: Double the links, double the fun!
    
