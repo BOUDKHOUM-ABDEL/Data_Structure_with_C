@@ -4,65 +4,65 @@
 
 
 int main() {
-    int val, choix;
+    int val, choice;
     node* start = NULL;
 
     
     do {
         puts("-------------------------MENU----------------------------");
-        printf("1. Ajouter un node au debut.\n");
-        printf("2. Ajouter un node a la fin.\n");
-        printf("3. Supprimer un node au debut.\n");
-        printf("4. Supprimer un node a la fin.\n");
-        printf("5. Afficher la liste.\n");
-        printf("6. Quitter.\n");
+        printf("1. Add a node at the beginning.\n");
+        printf("2. Add a node at the end.\n");
+        printf("3. Delete a node at the beginning.\n");
+        printf("4. Delete a node at the end.\n");
+        printf("5. Display the list.\n");
+        printf("6. Exit.\n");
         puts("--------------------------------------------------------");
-        printf("Choisissez une option : ");
-        scanf("%d", &choix);
+        printf("Choose an option: ");
+        scanf("%d", &choice);
 
-        switch (choix) {
+        switch (choice) {
 
             case 1:
                 puts("--------------------------------------------------------");
-                printf("Donnez une valeur pour ajouter au debut : ");
+                printf("Enter a value to add at the beginning: ");
                 scanf("%d", &val);
-                start = inserdebut(start, val);
-                shownode(start);
+                start = insertbeginning(start, val);
+                showlist(start);
                 break;
 
             case 2:
                 puts("--------------------------------------------------------");
-                printf("Donnez une valeur pour ajouter a la fin : ");
+                printf("Enter a value to add at the end: ");
                 scanf("%d", &val);
-                start = inserfin(start, val);
-                shownode(start);
+                start = insertend(start, val);
+                showlist(start);
                 break;
 
             case 3:
                 puts("--------------------------------------------------------");
-                start = suppdebut(start);
-                shownode(start);
+                start = deletebeginning(start);
+                showlist(start);
                 break;
 
             case 4:
                 puts("--------------------------------------------------------");
-                start = suppfin(start);
-                shownode(start);
+                start = deleteend(start);
+                showlist(start);
                 break;
 
             case 5:
                 puts("--------------------------------------------------------");
-                shownode(start);
+                showlist(start);
                 break;
 
             case 6:
-                printf("Quitter...\n");
+                printf("Exiting...\n");
                 break;
 
             default:
-                printf("Option invalide. Veuillez r�essayer.\n");
+                printf("Invalid option. Please try again.\n");
         }
-    } while (choix != 6);
+    } while (choice != 6);
 
     return 0;
 }
