@@ -9,42 +9,42 @@ typedef struct node {
 
 
 node* newnode(int val) {
-    node* nouv = (node*)malloc(sizeof(node));
-    if (!nouv) {
-        perror("Allocation echouee");
+    node* new_node = (node*)malloc(sizeof(node));
+    if (!new_node) {
+        perror("Memory allocation failed");
         exit(EXIT_FAILURE);
     }
-    nouv->data = val;
-    nouv->next = NULL;
-    return nouv;
+    new_node->data = val;
+    new_node->next = NULL;
+    return new_node;
 }
 
 
-node* inserdebut(node* start, int val) {
-    node* nouv = newnode(val);
-    nouv->next = start;
-    return nouv;
+node* insertbeginning(node* start, int val) {
+    node* new_node = newnode(val);
+    new_node->next = start;
+    return new_node;
 }
 
 
-node* inserfin(node* start, int val) {
-    node* nouv = newnode(val);
+node* insertend(node* start, int val) {
+    node* new_node = newnode(val);
     if (start == NULL) {
-        return nouv;
+        return new_node;
     } else {
         node* temp = start;
         while (temp->next != NULL) {
             temp = temp->next;
         }
-        temp->next = nouv;
+        temp->next = new_node;
         return start;
     }
 }
 
 
-node* suppdebut(node* start) {
+node* deletebeginning(node* start) {
     if (start == NULL) {
-        printf("Suppression impossible, la liste est vide.\n");
+        printf("Deletion failed, the list is empty.\n");
         return NULL;
     }
     node* temp = start;
@@ -54,9 +54,9 @@ node* suppdebut(node* start) {
 }
 
 
-node* suppfin(node* start) {
+node* deleteend(node* start) {
     if (start == NULL) {
-        printf("Suppression impossible, la liste est vide.\n");
+        printf("Deletion failed, the list is empty.\n");
         return NULL;
     }
     if (start->next == NULL) {
@@ -64,23 +64,23 @@ node* suppfin(node* start) {
         return NULL;
     }
     node* temp = start;
-    node* preptr = NULL;
+    node* prev = NULL;
     while (temp->next != NULL) {
-        preptr = temp;
+        prev = temp;
         temp = temp->next;
     }
-    preptr->next = NULL;
+    prev->next = NULL;
     free(temp);
     return start;
 }
 
 
-void shownode(node* start) {
+void showlist(node* start) {
     if (start == NULL) {
-        printf("La liste est vide.\n");
+        printf("The list is empty.\n");
         return;
     }
-    printf("Les valeurs de la liste sont : ");
+    printf("The values in the list are: ");
     while (start != NULL) {
         printf("%d -> ", start->data);
         start = start->next;
@@ -90,3 +90,6 @@ void shownode(node* start) {
 
 
 #endif
+
+
+
