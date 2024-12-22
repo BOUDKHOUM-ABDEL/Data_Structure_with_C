@@ -1,6 +1,7 @@
 ✨ Welcome to the Linked List Wizard! 
 
-    This program transforms the mystical world of singly linked lists into an interactive and fun experience. With just a sprinkle of your input and some C magic, you can build, manipulate, and display linked lists dynamically. ✨
+    This program transforms the mystical world of singly linked lists into an interactive and fun experience. With just a sprinkle of 
+    your input and some C magic, you can build, manipulate, and display linked lists dynamically. ✨
 
 Key Features (a.k.a. Spells 🪄):
 
