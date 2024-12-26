@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "head.h"
 
-
 int main() {
     int val, choix;
     node* racine = NULL;
@@ -18,7 +17,7 @@ int main() {
         puts("--------------------------------------------------------");
         printf("Choisissez une option : ");
         scanf("%d", &choix);
-
+        
         switch (choix) {
 
             case 1:
