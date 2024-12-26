@@ -11,6 +11,8 @@
           Structs: Simple but mighty.
           
           Singly Linked Lists: One step at a time, link by link.
+
+          Doubly Linked Lists: Double the links, double the fun!
     
        2. Algorithm Adventures 🏃‍♂️ 
 
