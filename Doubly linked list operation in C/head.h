@@ -8,49 +8,50 @@ typedef struct node {
 } node;
 
 
-node* newnode(int val) {
-    node* nouv = (node*)malloc(sizeof(node));
-    if (!nouv) {
-        perror("Allocation échouée");
+node* createNewNode(int val) {
+    node* newNode = (node*)malloc(sizeof(node));
+    if (!newNode) {
+        perror("Memory allocation failed");
         exit(EXIT_FAILURE);
     }
-    nouv->data = val;
-    nouv->right = nouv; 
-    nouv->left = nouv;
-    return nouv;
+    newNode->data = val;
+    newNode->right = newNode; 
+    newNode->left = newNode;
+    return newNode;
 }
 
 
-node* inserdebut(node* start, int val) {
-    node* nouv = newnode(val);
+node* insertAtBeginning(node* start, int val) {
+    node* newNode = createNewNode(val);
     if (start == NULL) { 
-        return nouv;
+        return newNode;
     }
     node* last = start->left;
-    nouv->right = start;
-    nouv->left = last;
-    start->left = nouv;
-    last->right = nouv;
-    return nouv; 
-
-
-node* inserfin(node* start, int val) {
-    if (start == NULL) { // Empty list
-        return newnode(val);
-    }
-    node* nouv = newnode(val);
-    node* last = start->left;
-    nouv->left = last;
-    nouv->right = start;
-    last->right = nouv;
-    start->left = nouv;
-    return start; 
+    newNode->right = start;
+    newNode->left = last;
+    start->left = newNode;
+    last->right = newNode;
+    return newNode;  
 }
 
 
-node* suppdebut(node* start) {
+node* insertAtEnd(node* start, int val) {
+    if (start == NULL) { // Empty list
+        return createNewNode(val);
+    }
+    node* newNode = createNewNode(val);
+    node* last = start->left;
+    newNode->left = last;
+    newNode->right = start;
+    last->right = newNode;
+    start->left = newNode;
+    return start;  
+}
+
+
+node* deleteFromBeginning(node* start) {
     if (start == NULL) {
-        printf("Suppression impossible, la liste est vide.\n");
+        printf("Deletion not possible, the list is empty.\n");
         return NULL;
     }
     if (start->right == start) { 
@@ -66,9 +67,9 @@ node* suppdebut(node* start) {
     return start; 
 }
 
-node* suppfin(node* start) {
+node* deleteFromEnd(node* start) {
     if (start == NULL) {
-        printf("Suppression impossible, la liste est vide.\n");
+        printf("Deletion not possible, the list is empty.\n");
         return NULL;
     }
     if (start->right == start) { 
@@ -76,28 +77,26 @@ node* suppfin(node* start) {
         return NULL;
     }
     node* last = start->left;
-    node* second_last = last->left;
-    second_last->right = start;
-    start->left = second_last;
+    node* secondLast = last->left;
+    secondLast->right = start;
+    start->left = secondLast;
     free(last);
     return start; 
 }
 
 
-void shownode(node* start) {
+void displayList(node* start) {
     if (start == NULL) {
-        printf("La liste est vide.\n");
+        printf("The list is empty.\n");
         return;
     }
-    printf("Les valeurs de la liste sont : ");
+    printf("The values in the list are: ");
     node* temp = start;
     do {
         printf("%d -> ", temp->data);
         temp = temp->right;
     } while (temp != start);
-    printf("(Retour au début)\n");
+    printf("(Back to the beginning)\n");
 }
 
-
-
-#endif 
+#endif
