@@ -1,7 +1,7 @@
-✨ Welcome to the Enchanted Realm of Doubly Linked Lists! ✨
+✨ Welcome to the Enchanted Realm of Circular Doubly Linked Lists! ✨
 
     Step into a magical world where data flows both ways! With this spellbinding program, you’ll harness the 
-    incredible power of **doubly linked lists**, navigating and manipulating nodes like a true wizard of data structures. 🧙‍♂️
+    incredible power of ** Circular doubly linked lists**, navigating and manipulating nodes like a true wizard of data structures. 🧙‍♂️
 
 Key Features (a.k.a. Spells 🪄):
 
