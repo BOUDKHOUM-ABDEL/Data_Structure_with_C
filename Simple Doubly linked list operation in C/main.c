@@ -17,6 +17,47 @@ int main() {
         printf("Choose an option: ");
         scanf("%d", &choice);
         
+         switch (choice) {
+            case 1:
+                puts("--------------------------------------------------------");
+                printf("Enter a value to add at the beginning: ");
+                scanf("%d", &val);
+                root = insertAtBeginning(root, val);
+                displayList(root);
+                break;
+
+            case 2:
+                puts("--------------------------------------------------------");
+                printf("Enter a value to add at the end: ");
+                scanf("%d", &val);
+                root = insertAtEnd(root, val);
+                displayList(root);
+                break;
+
+            case 3:
+                puts("--------------------------------------------------------");
+                root = deleteFromBeginning(root);
+                displayList(root);
+                break;
+
+            case 4:
+                puts("--------------------------------------------------------");
+                root = deleteFromEnd(root);
+                displayList(root);
+                break;
+
+            case 5:
+                puts("--------------------------------------------------------");
+                displayList(root);
+                break;
+
+            case 6:
+                printf("Exiting...\n");
+                break;
+
+            default:
+                printf("Invalid option. Please try again.\n");
+        }
        
     } while (choice != 6);
 
