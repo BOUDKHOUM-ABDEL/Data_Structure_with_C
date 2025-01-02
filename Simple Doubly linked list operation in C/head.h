@@ -6,5 +6,16 @@ typedef struct node {
     struct node* left;  
 } node;
 
+node* createNewNode(int val) {
+    node* ptr = (node*)malloc(sizeof(node));
+    if (!ptr) {
+        perror("Memory allocation failed");
+        exit(EXIT_FAILURE);
+    }
+    ptr->data = val;
+    ptr->right = NULL; 
+    ptr->left = NULL;  
+    return ptr;
+}
 
 #endif
