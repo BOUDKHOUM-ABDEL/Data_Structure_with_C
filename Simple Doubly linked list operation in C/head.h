@@ -46,5 +46,11 @@ node* deleteFromBeginning(node* start) {
     }
     node* temp = start;
     start = start->right;
+if (start != NULL) {
+        start->left = NULL;
+    }
+    free(temp);
+    return start;
+}
 
 #endif
