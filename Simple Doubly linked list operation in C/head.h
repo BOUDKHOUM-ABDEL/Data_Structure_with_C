@@ -58,6 +58,18 @@ node* deleteFromEnd(node* start) {
         return NULL;
     }
     if (start->right == NULL) {
+ if (start->right == NULL) { 
+        free(start);
+        return NULL;
+    }
+    node* temp = start;
+    while (temp->right != NULL) { 
+        temp = temp->right;
+    }
+    temp->left->right = NULL;
+    free(temp);
+    return start;
+}
 
 
 #endif
