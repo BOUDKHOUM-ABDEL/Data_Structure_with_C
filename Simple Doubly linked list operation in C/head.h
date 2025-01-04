@@ -32,12 +32,19 @@ node* insertAtEnd(node* start, int val) {
     }
     node* ptr = createNewNode(val);
     node* temp = start;
-    while (temp->right != NULL) { // Traverse to the end of the list
+    while (temp->right != NULL) { 
         temp = temp->right;
     }
     temp->right = ptr;
     ptr->left = temp;
-    return start; // The start remains unchanged
+    return start; 
 }
+node* deleteFromBeginning(node* start) {
+    if (start == NULL) {
+        printf("Deletion not possible, the list is empty.\n");
+        return NULL;
+    }
+    node* temp = start;
+    start = start->right;
 
 #endif
