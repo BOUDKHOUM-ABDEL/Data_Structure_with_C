@@ -26,4 +26,8 @@ node* insertAtBeginning(node* start, int val) {
     start->left = ptr;
     return ptr; 
 }
+node* insertAtEnd(node* start, int val) {
+    if (start == NULL) {
+        return createNewNode(val); 
+    }
 #endif
