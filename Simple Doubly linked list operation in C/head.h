@@ -30,9 +30,14 @@ node* insertAtEnd(node* start, int val) {
     if (start == NULL) {
         return createNewNode(val); 
     }
-node* ptr = createNewNode(val);
+    node* ptr = createNewNode(val);
     node* temp = start;
     while (temp->right != NULL) { // Traverse to the end of the list
         temp = temp->right;
     }
+    temp->right = ptr;
+    ptr->left = temp;
+    return start; // The start remains unchanged
+}
+
 #endif
