@@ -52,5 +52,12 @@ if (start != NULL) {
     free(temp);
     return start;
 }
+node* deleteFromEnd(node* start) {
+    if (start == NULL) {
+        printf("Deletion not possible, the list is empty.\n");
+        return NULL;
+    }
+    if (start->right == NULL) {
+
 
 #endif
