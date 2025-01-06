@@ -75,5 +75,7 @@ void displayList(node* start) {
         printf("The list is empty.\n");
         return;
     }
+    printf("The values in the list are: ");
+    node* temp = start;
 
 #endif
