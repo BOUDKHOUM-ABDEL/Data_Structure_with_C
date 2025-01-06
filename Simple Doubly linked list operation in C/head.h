@@ -1,8 +1,9 @@
 #ifndef HEAD_H_INCLUDED
 #define HEAD_H_INCLUDED
+
 typedef struct node {
     int data;
-    struct node* right; 
+    struct node* right;  
     struct node* left;  
 } node;
 
@@ -14,18 +15,20 @@ node* createNewNode(int val) {
     }
     ptr->data = val;
     ptr->right = NULL; 
-    ptr->left = NULL;  
+    ptr->left = NULL; 
     return ptr;
 }
+
 node* insertAtBeginning(node* start, int val) {
     node* ptr = createNewNode(val);
     if (start == NULL) {
-        return ptr;
- }
+        return ptr; 
+    }
     ptr->right = start;
     start->left = ptr;
     return ptr; 
 }
+
 node* insertAtEnd(node* start, int val) {
     if (start == NULL) {
         return createNewNode(val); 
@@ -39,26 +42,27 @@ node* insertAtEnd(node* start, int val) {
     ptr->left = temp;
     return start; 
 }
+
 node* deleteFromBeginning(node* start) {
     if (start == NULL) {
         printf("Deletion not possible, the list is empty.\n");
         return NULL;
     }
     node* temp = start;
-    start = start->right;
-if (start != NULL) {
+    start = start->right; 
+    if (start != NULL) {
         start->left = NULL;
     }
     free(temp);
     return start;
 }
+
 node* deleteFromEnd(node* start) {
     if (start == NULL) {
         printf("Deletion not possible, the list is empty.\n");
         return NULL;
     }
-    if (start->right == NULL) {
- if (start->right == NULL) { 
+    if (start->right == NULL) { 
         free(start);
         return NULL;
     }
@@ -70,6 +74,7 @@ node* deleteFromEnd(node* start) {
     free(temp);
     return start;
 }
+
 void displayList(node* start) {
     if (start == NULL) {
         printf("The list is empty.\n");
@@ -81,5 +86,7 @@ void displayList(node* start) {
         printf("%d -> ", temp->data);
         temp = temp->right;
     }
+    printf("NULL\n");
+}
 
 #endif
