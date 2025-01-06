@@ -77,5 +77,9 @@ void displayList(node* start) {
     }
     printf("The values in the list are: ");
     node* temp = start;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->right;
+    }
 
 #endif
