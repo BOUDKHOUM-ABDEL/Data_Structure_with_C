@@ -70,6 +70,10 @@ node* deleteFromEnd(node* start) {
     free(temp);
     return start;
 }
-
+void displayList(node* start) {
+    if (start == NULL) {
+        printf("The list is empty.\n");
+        return;
+    }
 
 #endif
