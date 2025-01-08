@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "PILE.h"
+#include "Queue.h"
 
 int main() {
     myQueue Q1;
