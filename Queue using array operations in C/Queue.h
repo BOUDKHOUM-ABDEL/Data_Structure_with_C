@@ -14,6 +14,12 @@ int estpleine(mypile F){
  int estvide(mypile F){
      return F.queue == F.tete;
  }
+void enfiler(mypile* F, int val){
+     F->file[F-> queue++]=val;
+ }
+ int defiler(mypile*F){
 
+ return F->file[F->tete++ ];
+ }
 
 #endif 
