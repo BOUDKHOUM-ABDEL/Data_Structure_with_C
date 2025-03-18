@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+typedef struct {
+  char nom[30];
+  char entrineur[40];
+  char stade[30];
+  char pay[20];
+}team;
+
+typedef struct {
+  int num ;
+  char nom[50];
+  char post[10];
+  team team;
+}Player;
+
+int main() {
+
+    Player p[2];
+    int i;
+
+    for(i=0 ; i<2 ; i++){
+        printf("___________type the %d player info:____________\n",i+1);
+        printf("put the %d player number:", i+1);
+        scanf("%d",&p[i].num);
+        printf("type the %d palyer name:",i+1);
+        scanf("%s",&p[i].nom);
+        printf("type the %d player post:",i+1);
+        scanf("%s",&p[i].post);
+
+        printf("__________type the %d player team info:________\n",i+1);
+        printf("type the team name:");
+        scanf("%s",&p[i].team.nom);
+        printf("type the coach mane:");
+        scanf("%s",&p[i].team.entrineur);
+        printf("type the Stade name:");
+        scanf("%s",&p[i].team.stade);
+        printf("type the country:");
+        scanf("%s",&p[i].team.pay);
+    }
+printf("\n");
+ for(i=0 ; i<2 ;i++){
+  printf("%d player info: ", i+1);
+  printf(" \t  kit nbr: %d - name : %s - post : %s \n", p[i].num, p[i].nom, p[i].post);
+  printf(" \t  Team : %s - Coach : %s - Stade : %s - Pay : %s \n", p[i].team.nom, p[i].team.entrineur,p[i].team.stade, p[i].team.pay);
+
+}
+return 0;}
