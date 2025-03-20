@@ -26,6 +26,7 @@ int main() {
                 root = insertAtBeginning(root, val);
                 displayList(root);
                 break;
+                ;
 
             case 2:
                 puts("--------------------------------------------------------");
