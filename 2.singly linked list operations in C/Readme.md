@@ -3,7 +3,9 @@
     This program transforms the mystical world of singly linked lists into an interactive and fun experience. With just a sprinkle of 
     your input and some C magic, you can build, manipulate, and display linked lists dynamically. ✨
 
-Key Features (a.k.a. Spells 🪄):    📜 Summon Nodes: Add nodes to the beginning or the end of your linked list in a flash.
+Key Features (a.k.a. Spells 🪄):  
+
+       📜 Summon Nodes: Add nodes to the beginning or the end of your linked list in a flash.
         ❌ Banish Nodes: Remove pesky nodes from the start or end with ease.
         👀 Reveal the List: Display your entire linked list in a clean, magical format (10 -> 20 -> NULL).
         🛡️ Error Protection: Handles edge cases gracefully (e.g., trying to delete from an empty list? Not on our watch!).
