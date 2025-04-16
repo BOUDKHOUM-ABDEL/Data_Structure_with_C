@@ -17,4 +17,15 @@ void init_file(File *f){
    f->taille=0;
 }
 
+node* new_node(int val){
+   node* nouv=malloc(sizeof(node));
+
+  if (nouv==NULL){
+    puts("echec de l'allocation dynamique");
+    return NULL;
+  } else{
+      nouv->data=val;
+      nouv->next=NULL;
+       return nouv;}
+  }
 #endif // PILE_H_INCLUDED
