@@ -12,6 +12,9 @@ typedef struct File{
    int taille;
 }File;
 
-
+void init_file(File *f){
+  f->tete= f->queue=NULL;
+   f->taille=0;
+}
 
 #endif // PILE_H_INCLUDED
