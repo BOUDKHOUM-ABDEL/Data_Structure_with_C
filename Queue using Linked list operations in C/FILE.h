@@ -28,4 +28,8 @@ node* new_node(int val){
       nouv->next=NULL;
        return nouv;}
   }
+
+ int est_vide(File *f){
+     return f->taille==0;
+ }
 #endif // PILE_H_INCLUDED
