@@ -66,4 +66,20 @@ void defiler(File* f){
 
 return;
     }
+void show_file(File *f){
+     node* ptr=f->tete;
+      if (est_vide(f)){
+        puts("\n la file est vide\n\n");
+        }
+      else{
+    puts("\n les valeurs de la file sont:\n");
+    while (ptr != NULL) {
+      printf("%d -- ", ptr->data);
+      ptr = ptr->next;
+}
+
+    }
+     printf(" \n");
+     return;
+    }
 #endif // PILE_H_INCLUDED
