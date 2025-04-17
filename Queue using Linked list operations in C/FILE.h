@@ -49,4 +49,21 @@ void enfiler(File* f, int val){
    f->taille++;
 
 }
+void defiler(File* f){
+
+
+    if (est_vide(f)){
+        puts("la file est vide");
+        return;
+        }
+    node* temp = f->tete;
+    f->tete=temp->next;
+    free(temp);
+    f->taille--;
+    if (f->tete == NULL) {
+        f->queue = NULL;
+    }
+
+return;
+    }
 #endif // PILE_H_INCLUDED
