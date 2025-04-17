@@ -32,4 +32,21 @@ node* new_node(int val){
  int est_vide(File *f){
      return f->taille==0;
  }
+
+void enfiler(File* f, int val){
+   node* nouv = new_node(val);
+   if (nouv == NULL) return;  // En cas d'échec de l'allocation
+    if (est_vide(f)){
+
+       f->tete = f->queue = nouv;
+
+      }
+    else {
+        f->queue->next=nouv;
+        f->queue=nouv;
+
+        }
+   f->taille++;
+
+}
 #endif // PILE_H_INCLUDED
