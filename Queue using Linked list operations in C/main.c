@@ -21,7 +21,21 @@ int main()
 
        printf("choisis votre modification:\n \n");
        scanf("%d",&choix);
-       
+       switch(choix){
+             case 1:
+                    printf("\n--------------------------------\n");
+                    printf("donner la valeur pour ajouter:\n");
+                    scanf("%d",&val);
+                    enfiler(&F1, val);
+                    printf("\n");
+                    show_file(&F1);
+                    break;
+
+           
+           default:
+                   printf("Option invalide. Veuillez reessayer.\n");
+
+        }
     } while (choix != 0);
 
  
