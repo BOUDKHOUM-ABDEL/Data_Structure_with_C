@@ -30,6 +30,20 @@ int main()
                     printf("\n");
                     show_file(&F1);
                     break;
+          
+              case 2:
+                   printf("\n--------------------------------\n");
+                   defiler(&F1);
+                   break;
+
+            case 3:
+                   printf("\n--------------------------------\n");
+                   show_file(&F1);
+                   break;
+
+            case 0:
+                   printf("Quitter...\n");
+                   break;
 
            
            default:
