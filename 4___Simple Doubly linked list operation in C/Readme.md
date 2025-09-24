@@ -1,0 +1,1 @@
+warning: in the working copy of '4___Simple Doubly linked list operation in C/Readme.md', LF will be replaced by CRLF the next time Git touches it
