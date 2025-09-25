@@ -33,12 +33,16 @@
 **What’s Coming Next? 🎉 (Get Excited) 🔮**
 
          1. The Basics, But Powerful 💥
+         
+          Structs: Simple but mighty.
+          
+          Singly Linked Lists: One step at a time, link by link.
    
           Doubly Linked Lists: Double the links, double the fun!
    
-          Stacks: LIFO – Last In, First Out, but it’s still fun!
-   
           Queues: FIFO – the order you can count on!
+
+          Stacks: LIFO – Last In, First Out, but it’s still fun!
    
      
           2 . Get Advanced, Get Cool 🔥
