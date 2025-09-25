@@ -13,6 +13,12 @@
           Singly Linked Lists: One step at a time, link by link.
 
           Doubly Linked Lists: Double the links, double the fun!
+
+          Queue: First come, first served — the line of code never lies.
+
+          Stack: Last in, first out — the tower of order and chaos.
+
+          Tree: Branch out, grow deep — nature’s blueprint in code.
     
        2. Algorithm Adventures 🏃‍♂️ 
 
